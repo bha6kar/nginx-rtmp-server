@@ -17,10 +17,8 @@ gcloud container images delete gcr.io/cloud2019/nginx-server:v1
 
 kubectl expose deployment web-dev --type=LoadBalancer --name=web-dev
 
-kubectl expose deployment mongodb --type=LoadBalancer --name=mongodb
+# gcloud container images list-tags gcr.io/cloudcomputing-235600/nginx-server --filter='-tags:*' --format='get(digest)' --limit=unlimited
 
-gcloud container images list-tags gcr.io/cloudcomputing-235600/nginx-server --filter='-tags:*' --format='get(digest)' --limit=unlimited
+# gcloud container images delete --quiet gcr.io/cloudcomputing-235600/nginx-server@sha256:78e61f6b8e0dce572f7472589ad2e4317d3c2286bc5469f231bb4561e8012aaf
 
-gcloud container images delete --quiet gcr.io/cloudcomputing-235600/nginx-server@sha256:78e61f6b8e0dce572f7472589ad2e4317d3c2286bc5469f231bb4561e8012aaf
-
-gcloud container images delete gcr.io/cloudcomputing-235600/nginx-server:v1
+# gcloud container images delete gcr.io/cloudcomputing-235600/nginx-server:v1
